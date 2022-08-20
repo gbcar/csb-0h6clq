@@ -1,0 +1,138 @@
+html {
+  background-color: #1e1e1e; /* cor de fundo da página */
+  color: #ffffff; /* cor do texto */
+
+  /* adaptação do tamanho da fonte para permitir o uso de valores relativos 
+     (ex.: rem - unidade relativa baseada no tamanho da fonte),
+     possibilitando a adaptação do site em todas as resoluções de todos dispositivos,
+     ou seja, diferentes tipos de telas
+  */
+  font-size: 62.5%;
+  /* o padrão de tamanho de fonte do html é 16 pixels, mas, para a conversão
+     para rem, é mais intuitivo trabalhar com tamanho de fonte de 10 pixels
+     (na base 16 pixels, os valores em rem são quebrados):
+     1 pixel = 0.1 rem
+     16 pixels = 1.6 rem
+     30 pixels = 3 rem
+     60 pixels = 6 rem
+
+     Logo, 62,5% é quanto representa o tamanho de fonte de 10 pixels em relação 
+     a 16 pixels (10/16).
+  */
+}
+body {
+  font-family: "Poppins", sans-serif; /* fontes principal e alternativa */
+  font-size: 1.6rem; /* tamanho de fonte de 16 pixels na base 10 */
+}
+section,
+footer {
+  max-width: 96rem; /* largura máxima */
+  margin: 0 auto; /* margem lateral automática para centralizar no meio da página */
+  padding: 5rem; /* espaçamento interno de 50 pixels */
+}
+footer {
+  flex-direction: column;
+}
+.inspecionar {
+  border: 5px solid red;
+}
+.nav {
+  padding: 2rem 6rem; /* espaçamento interno */
+}
+.nav-links {
+  font-size: 1.8rem;
+  display: flex; /* elementos dentro do container são posicionados de maneira flexível (elementos são encaixados dentro do container de forma igual, ocupando o mesmo espaço) */
+  justify-content: flex-end; /* alinhamento horizontal: elementos posicionados no final do container */
+  gap: 1rem; /* espaçamento entre os elementos */
+}
+.nav-links a {
+  color: #ffffff; /* cor do texto dos links */
+  text-decoration: none; /* remove linha abaixo dos links */
+}
+.main {
+  margin-bottom: 5rem;
+}
+.items-center {
+  display: flex; /* elementos dentro do container são posicionados de maneira flexível (elementos são encaixados dentro do container de forma igual, ocupando o mesmo espaço) */
+  align-items: center; /* alinhamento vertical: elementos posicionados no centro do container */
+  justify-content: center; /* alinhamento horizontal: elementos posicionados no centro do container */
+}
+.avatar {
+  border-radius: 100%; /* bordas arredondadas */
+  width: 24rem; /* largura */
+  height: 24rem; /* altura */
+  margin-right: 10rem; /* margem direita */
+}
+.main-title {
+  font-size: 4rem;
+}
+.main-description {
+  margin: 4rem 0; /* margens superior e inferior */
+  font-size: 1.6rem;
+}
+.button {
+  border-radius: 0.5rem;
+  background-color: #0039cc;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+}
+.container-about {
+  background-color: #162340; /* cor de fundo da seção About */
+}
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.about-description {
+  font-size: 1.6rem;
+}
+.projects-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.project {
+  margin-bottom: 4rem;
+}
+.project-image {
+  width: 24rem; /* largura */
+  height: 18rem; /* altura */
+  margin-right: 2.5rem; /* margem direita */
+  border-radius: 0.5rem;
+}
+.project-title {
+  font-size: 2rem;
+}
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+/* responsividade quando a tela tiver menos de 1200 pixels */
+@media (max-width: 1200px) {
+  .items-center {
+    flex-direction: column; /* itens tratados como colunas */
+  }
+  section,
+  footer {
+    padding: 5rem;
+  }
+  .main {
+    margin-bottom: 2rem;
+  }
+  .main-title {
+    font-size: 3rem;
+  }
+  .project-image {
+    width: 38rem; /* largura */
+    height: auto; /* altura */
+  }
+  .nav-links {
+    justify-content: center; /* alinhamento centralizado */
+  }
+  .avatar {
+    width: 18rem; /* largura */
+    height: 18rem; /* altura */
+    margin-right: 0; /* alinhamento centralizado */
+  }
+}
